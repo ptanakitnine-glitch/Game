@@ -4896,7 +4896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   rb: {fileID: 1530845859}
-  moveSpeed: 2
+  moveSpeed: 5
 --- !u!58 &1530845858
 CircleCollider2D:
   m_ObjectHideFlags: 0
