@@ -22,17 +22,18 @@ public class EnemyMovement : MonoBehaviour
         {
             pathIndex++;
 
-            if(pathIndex == LevelManager.main.path.Length)
+            if(pathIndex == LevelManager.main.path.Length) // end of path list
             {
+                EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
                 return;
             } else
             {
-                target = LevelManager.main.path[pathIndex];
+                target = LevelManager.main.path[pathIndex]; // new target
             }
         }
     }
-    private void FixedUpdate()
+    private void FixedUpdate() // move
     {
         Vector2 direction = (target.position - transform.position).normalized;
 
