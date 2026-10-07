@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - enemy
+  - jh
   layers:
   - Default
   - TransparentFX
@@ -11,10 +13,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - base
+  - gun
+  - enemy
+  - Bullet
   - 
   - 
   - 
@@ -44,11 +46,11 @@ TagManager:
   - name: Base
     uniqueID: 519278257
     locked: 0
-  - name: turret_0
-    uniqueID: 2498518605
-    locked: 0
   - name: turret_1
     uniqueID: 1595716041
+    locked: 0
+  - name: Bullet
+    uniqueID: 511969077
     locked: 0
   m_RenderingLayers:
   - Default
