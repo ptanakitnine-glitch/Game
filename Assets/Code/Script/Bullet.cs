@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
         rb.linearVelocity = direction * bulletSpeed;
      }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
         Destroy(gameObject);

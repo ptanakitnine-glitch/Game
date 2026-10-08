@@ -4031,10 +4031,14 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
   - {fileID: 2854087807484306623, guid: d0f937b209ed8124ba1e1891922c1718, type: 3}
+  - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
+  - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
   baseEnemies: 5
   enemiesPerSecond: 1
   timeBetweenWaves: 5
-  difficultyScalingFactor: 0.1
+  difficultyScalingFactor: 0.75
+  enemiesPerSecondCap: 15
+  currentWave: 1
 --- !u!114 &961792721
 MonoBehaviour:
   m_ObjectHideFlags: 0
