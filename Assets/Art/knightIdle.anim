@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: explosive
+  m_Name: knightIdle
   serializedVersion: 8
   m_Legacy: 0
   m_Compressed: 0
@@ -21,19 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -6406896734354736596, guid: 984ea68c2c9824f4eb2b5f39f766610c, type: 3}
-    - time: 0.16666667
-      value: {fileID: -4445122159279143989, guid: 984ea68c2c9824f4eb2b5f39f766610c, type: 3}
-    - time: 0.33333334
-      value: {fileID: -9159496763437703327, guid: 984ea68c2c9824f4eb2b5f39f766610c, type: 3}
-    - time: 0.5
-      value: {fileID: -6147084317841773521, guid: 984ea68c2c9824f4eb2b5f39f766610c, type: 3}
+      value: {fileID: 2213937258745609805, guid: e56a490e14ce0d34c984108f71af1a1d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 12
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -51,16 +45,13 @@ AnimationClip:
       isSerializeReferenceCurve: 0
       metaData: 0
     pptrCurveMapping:
-    - {fileID: -6406896734354736596, guid: 984ea68c2c9824f4eb2b5f39f766610c, type: 3}
-    - {fileID: -4445122159279143989, guid: 984ea68c2c9824f4eb2b5f39f766610c, type: 3}
-    - {fileID: -9159496763437703327, guid: 984ea68c2c9824f4eb2b5f39f766610c, type: 3}
-    - {fileID: -6147084317841773521, guid: 984ea68c2c9824f4eb2b5f39f766610c, type: 3}
+    - {fileID: 2213937258745609805, guid: e56a490e14ce0d34c984108f71af1a1d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5833333
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

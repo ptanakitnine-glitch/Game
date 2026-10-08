@@ -43,7 +43,6 @@ public class EnemyMovement : MonoBehaviour
     }
     public float calDis()
     {
-        float maxDis = 999;
         float distance = 0;
         Vector3 CurrPos = this.transform.position;
         for (int i = pathIndex + 1; i < lm.path.Length-1; i++)

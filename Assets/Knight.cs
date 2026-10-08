@@ -6,7 +6,7 @@ public class Knight : MonoBehaviour
     [SerializeField] private LayerMask enemyMark;
     [SerializeField] private GameObject SwordSlashPrefab;
     [SerializeField] private Transform firingPoint;
-    [SerializeField] private Animator myAnimator;
+    [SerializeField] private Animator Animator;
 
 
     [Header("Attribute")]
@@ -33,6 +33,11 @@ public class Knight : MonoBehaviour
 
             if (timeUntilFire >= 1f / bps)
             {
+                if (Animator != null)
+                {
+                    Debug.Log("play");
+                    Animator.SetTrigger("Shoot");
+                }
                 Shoot();
                 timeUntilFire = 0f;
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 241664351564809386}
   - component: {fileID: 6568472711786528105}
   - component: {fileID: 1832733909138340436}
-  - component: {fileID: 4838103065843585947}
+  - component: {fileID: 6043461208152845771}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -112,10 +112,10 @@ MonoBehaviour:
     m_Bits: 256
   SwordSlashPrefab: {fileID: 6445796825154578880, guid: 14596c7f1b43e7045b607075460dcc45, type: 3}
   firingPoint: {fileID: 2094344952355313270}
-  myAnimator: {fileID: 0}
+  Animator: {fileID: 6043461208152845771}
   targetingRange: 2
   bps: 1
---- !u!95 &4838103065843585947
+--- !u!95 &6043461208152845771
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
