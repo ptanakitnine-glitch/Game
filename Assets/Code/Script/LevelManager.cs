@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
@@ -34,6 +35,14 @@ public class LevelManager : MonoBehaviour
             audioSource.Play();
             audioSource.loop = false;
             playSound = true;
+        }
+        if (Keyboard.current.mKey.wasPressedThisFrame)
+        {
+            currency += 1000;
+        }
+        if (Keyboard.current.nKey.wasPressedThisFrame)
+        {
+            waveHeart += 10;
         }
     }
 
