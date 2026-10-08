@@ -186,4 +186,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61e4f7f8eb1db74e99d41acc819b5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  hitPoints: 10
+  hitPoints: 6

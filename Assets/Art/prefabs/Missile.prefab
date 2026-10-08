@@ -109,8 +109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   rb: {fileID: 1182447592036899128}
   MissileSpeed: 10
-  MissileDamage: 2
+  MissileDamage: 3
   explosiveRadius: 2
+  explosiveDamage: 2
 --- !u!58 &6424487035584132495
 CircleCollider2D:
   m_ObjectHideFlags: 0
