@@ -22,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
     private float eps; //enemies per sec
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    public LevelManager levelManager;
 
     private void Awake()
     {
@@ -65,10 +66,13 @@ public class EnemySpawner : MonoBehaviour
 
     private void EndWave()
     {
-        isSpawning = false;
-        timeSinceLastSpawn = 0f;
-        currentWave++;
-        StartWave();
+        if (levelManager.waveHeart > 0)
+        {
+            isSpawning = false;
+            timeSinceLastSpawn = 0f;
+            currentWave++;
+            StartWave();
+        }
     }
 
     private void SpawnEnemy()
