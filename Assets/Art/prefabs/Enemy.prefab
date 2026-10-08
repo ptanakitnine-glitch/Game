@@ -173,7 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   rb: {fileID: 5918932614518395756}
   moveSpeed: 2
-  prog: 0
 --- !u!114 &-7818938571707099358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,4 +185,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61e4f7f8eb1db74e99d41acc819b5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  hitPoints: 6
+  hitPoints: 10
