@@ -3178,9 +3178,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   enemyPrefabs:
   - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
+  - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
+  - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
   - {fileID: 2854087807484306623, guid: d0f937b209ed8124ba1e1891922c1718, type: 3}
-  - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
-  - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
   baseEnemies: 10
   enemiesPerSecond: 1
   timeBetweenWaves: 5
@@ -3215,6 +3215,7 @@ MonoBehaviour:
   - {fileID: 456375220}
   - {fileID: 1133614265}
   currency: 0
+  waveHeart: 5
 --- !u!4 &961792722
 Transform:
   m_ObjectHideFlags: 0
