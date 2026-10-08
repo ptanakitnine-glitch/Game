@@ -10,10 +10,13 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target;
     private int pathIndex = 0;
+    public int prog = 0;
+    private LevelManager lm;
 
     private void Start()
     {
         target = LevelManager.main.path[pathIndex];
+        lm = FindAnyObjectByType<LevelManager>();
     }
 
     private void Update()
@@ -21,15 +24,14 @@ public class EnemyMovement : MonoBehaviour
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
             pathIndex++;
-
-            if(pathIndex == LevelManager.main.path.Length) // end of path list
+            if(pathIndex == lm.path.Length) // end of path list
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
                 return;
             } else
             {
-                target = LevelManager.main.path[pathIndex]; // new target
+                target = lm.path[pathIndex]; // new target
             }
         }
     }
@@ -38,5 +40,17 @@ public class EnemyMovement : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.linearVelocity = direction * moveSpeed;
+    }
+    public float calDis()
+    {
+        float maxDis = 999;
+        float distance = 0;
+        Vector3 CurrPos = this.transform.position;
+        for (int i = pathIndex + 1; i < lm.path.Length-1; i++)
+        {
+            distance += Vector2.Distance(lm.path[i].position, lm.path[i+1].position);
+        }
+        distance += Vector2.Distance(CurrPos, lm.path[pathIndex].position);
+        return distance;
     }
 }
