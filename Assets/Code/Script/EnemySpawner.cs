@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyPrefabs;
 
     [Header("Attributes")]
-    public int baseEnemies = 8;
+    public int baseEnemies = 1;
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;
     public float difficultyScalingFactor = 0.75f;
@@ -85,6 +85,6 @@ public class EnemySpawner : MonoBehaviour
 
     private float EnemiesPerSecond()
     {
-        return Mathf.Clamp(enemiesPerSecond * Mathf.Pow(currentWave, difficultyScalingFactor),0f,enemiesPerSecond);
+        return Mathf.Clamp(enemiesPerSecond * Mathf.Pow(currentWave, difficultyScalingFactor),0f,enemiesPerSecondCap);
     }
 }

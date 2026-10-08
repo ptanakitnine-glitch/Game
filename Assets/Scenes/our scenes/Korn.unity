@@ -3181,11 +3181,11 @@ MonoBehaviour:
   - {fileID: 2854087807484306623, guid: d0f937b209ed8124ba1e1891922c1718, type: 3}
   - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
   - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
-  baseEnemies: 5
+  baseEnemies: 10
   enemiesPerSecond: 1
   timeBetweenWaves: 5
-  difficultyScalingFactor: 0.75
-  enemiesPerSecondCap: 15
+  difficultyScalingFactor: 0.2
+  enemiesPerSecondCap: 3
   currentWave: 1
 --- !u!114 &961792721
 MonoBehaviour:
@@ -5128,6 +5128,14 @@ PrefabInstance:
     - target: {fileID: 7748558713774705066, guid: 3bee3c93431f7cf49b930dcf785cbba8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667182306350730148, guid: 3bee3c93431f7cf49b930dcf785cbba8, type: 3}
+      propertyPath: bps
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667182306350730148, guid: 3bee3c93431f7cf49b930dcf785cbba8, type: 3}
+      propertyPath: targetingRange
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

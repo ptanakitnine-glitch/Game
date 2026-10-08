@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     public Transform[] path;
 
     public int currency;
+    public int waveHeart=5;
 
     private void Awake()
     {
@@ -36,5 +37,10 @@ public class LevelManager : MonoBehaviour
             Debug.Log("You do not have enough");
             return false;
         }
+    }
+    public void decreasewaveHeart()
+    {
+        waveHeart -= 1;
+        
     }
 }
