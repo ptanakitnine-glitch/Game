@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEditor;
-
-public class turret : MonoBehaviour
+public class Cannon : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Transform turretRotationPoint;
     [SerializeField] private LayerMask enemyMark;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject MissilePrefab;
     [SerializeField] private Transform firingPoint;
 
 
@@ -46,14 +45,15 @@ public class turret : MonoBehaviour
     }
     private void Shoot()
     {
-        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
-        Bullet bulletScript = bulletObj.GetComponent<Bullet>();
-        bulletScript.SetTarget(target);
+        GameObject MissileObj = Instantiate(MissilePrefab, firingPoint.position, Quaternion.identity);
+        Missile MissileScript = MissileObj.GetComponent<Missile>();
+        Findtarget();
+        MissileScript.SetTarget(target);
     }
 
     private void Findtarget()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)transform.position, 0f, enemyMark);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, Vector2.zero, 0f, enemyMark);
         float distance = 999;
         foreach (RaycastHit2D hit in hits)
         {
