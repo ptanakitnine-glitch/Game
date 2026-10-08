@@ -29,15 +29,24 @@ public class Missile : MonoBehaviour
     {
         other.gameObject.GetComponent<Health>().TakeDamage(MissileDamage);
 
-        if (explosiveRadius > 0f)
-        {
-            else
-            {
+        Explode();
+        Destroy(gameObject);
 
+        void Explode()
+        {
+            Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(transform.position, explosiveRadius);
+            foreach (Collider2D collider2D in collider2Ds)
+            {
+                if (collider2D.tag == "enemy")
+                {
+                    Damage(collider2D.gameObject);
+                }
             }
         }
+        void Damage(GameObject enemy)
+        {
+            Destroy(enemy);
+        }
 
-
-        Destroy(gameObject);
     }
 }
