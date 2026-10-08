@@ -53,6 +53,7 @@ public class TowerSelect : MonoBehaviour
 
             if (hit.collider != null)
             {
+                Debug.Log(hit.transform.gameObject.name);
                 if (hit.collider.gameObject == squareButton)
                 {
                     placeTower.currentTower = placeTower.squareTower;
