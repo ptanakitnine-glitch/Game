@@ -7,21 +7,21 @@ public class TowerSelect : MonoBehaviour
 
     public GameObject squareButton;
     public GameObject circleButton;
-    public GameObject triangleButton;
+    public GameObject capsuleButton;
 
     public GameObject squareHighlight;
     public GameObject circleHighlight;
-    public GameObject triangleHighlight;
+    public GameObject capsuleHighlight;
 
     void Start()
     {
         squareButton.GetComponent<SpriteRenderer>().sortingOrder = 5;
         circleButton.GetComponent<SpriteRenderer>().sortingOrder = 5;
-        triangleButton.GetComponent<SpriteRenderer>().sortingOrder = 5;
+        capsuleButton.GetComponent<SpriteRenderer>().sortingOrder = 5;
 
         squareHighlight.GetComponent<SpriteRenderer>().sortingOrder = 4;
         circleHighlight.GetComponent<SpriteRenderer>().sortingOrder = 4;
-        triangleHighlight.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        capsuleHighlight.GetComponent<SpriteRenderer>().sortingOrder = 4;
 
         ShowHighlight(squareHighlight);
     }
@@ -41,8 +41,8 @@ public class TowerSelect : MonoBehaviour
         }
         if (Keyboard.current.digit3Key.wasPressedThisFrame)
         {
-            placeTower.currentTower = placeTower.triangleTower;
-            ShowHighlight(triangleHighlight);
+            placeTower.currentTower = placeTower.capsuleTower;
+            ShowHighlight(capsuleHighlight);
         }
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -63,10 +63,10 @@ public class TowerSelect : MonoBehaviour
                     placeTower.currentTower = placeTower.circleTower;
                     ShowHighlight(circleHighlight);
                 }
-                if (hit.collider.gameObject == triangleButton)
+                if (hit.collider.gameObject == capsuleButton)
                 {
-                    placeTower.currentTower = placeTower.triangleTower;
-                    ShowHighlight(triangleHighlight);
+                    placeTower.currentTower = placeTower.capsuleTower;
+                    ShowHighlight(capsuleHighlight);
                 }
             }
         }
@@ -76,7 +76,7 @@ public class TowerSelect : MonoBehaviour
     {
         squareHighlight.SetActive(false);
         circleHighlight.SetActive(false);
-        triangleHighlight.SetActive(false);
+        capsuleHighlight.SetActive(false);
         highlight.SetActive(true);
     }
 }

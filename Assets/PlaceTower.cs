@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlaceTower : MonoBehaviour
 {
     public GameObject squareTower;
-    public GameObject triangleTower;
+    public GameObject capsuleTower;
     public GameObject circleTower;
 
     public GameObject currentTower;
