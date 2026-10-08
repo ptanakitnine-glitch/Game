@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceTower
   squareTower: {fileID: 8673414344953332530, guid: 51426cb744be90049bc267dee321848b, type: 3}
-  triangleTower: {fileID: 7639360721001938321, guid: 6204b25ad4bfded498793bb2736d2400, type: 3}
+  capsuleTower: {fileID: 0}
   circleTower: {fileID: 4842741050389482764, guid: 4ba1c3ebd5035d7459c7cf3de3652597, type: 3}
   currentTower: {fileID: 0}
 --- !u!114 &924618765
@@ -894,10 +894,10 @@ MonoBehaviour:
   placeTower: {fileID: 924618764}
   squareButton: {fileID: 543824511}
   circleButton: {fileID: 1224210982}
-  triangleButton: {fileID: 274919741}
+  capsuleButton: {fileID: 0}
   squareHighlight: {fileID: 1247797803}
   circleHighlight: {fileID: 786059415}
-  triangleHighlight: {fileID: 191516004}
+  capsuleHighlight: {fileID: 0}
 --- !u!1 &1224210982
 GameObject:
   m_ObjectHideFlags: 0
