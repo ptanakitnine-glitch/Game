@@ -4,11 +4,11 @@ public class DeckControll : MonoBehaviour
 {
     [SerializeField] 
     public GameObject Deck;
-    private bool isActiveDeck = false;
+    private bool isActiveDeck = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Deck.SetActive(false);
+        Deck.SetActive(true);
     }
 
     // Update is called once per frame
