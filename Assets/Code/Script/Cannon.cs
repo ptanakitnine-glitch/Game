@@ -46,21 +46,28 @@ public class Cannon : MonoBehaviour
     private void Shoot()
     {
         GameObject MissileObj = Instantiate(MissilePrefab, firingPoint.position, Quaternion.identity);
-        Missile MissileScript = MissileObj.GetComponent<Missile>();
+        Bullet MissileScript = MissileObj.GetComponent<Bullet>();
         Findtarget();
         MissileScript.SetTarget(target);
     }
 
     private void Findtarget()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, Vector2.zero, 0f, enemyMark);
-        float distance = 999;
-        foreach (RaycastHit2D hit in hits)
+        target = null;
+
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, targetingRange, enemyMark);
+        float bestDistance = float.MaxValue;
+
+        foreach (Collider2D hit in hits)
         {
-            if (distance > hit.transform.gameObject.GetComponent<EnemyMovement>().calDis())
+            EnemyMovement enemy = hit.GetComponentInParent<EnemyMovement>();
+            if (enemy == null) continue;
+
+            float currentDistance = enemy.calDis();
+            if (currentDistance < bestDistance)
             {
-                target = hit.transform;
-                distance = hit.transform.gameObject.GetComponent<EnemyMovement>().calDis();
+                bestDistance = currentDistance;
+                target = enemy.transform;
             }
         }
     }
@@ -78,9 +85,4 @@ public class Cannon : MonoBehaviour
         turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed + Time.deltaTime);
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
-    }
 }

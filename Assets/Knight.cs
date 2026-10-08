@@ -47,7 +47,7 @@ public class Knight : MonoBehaviour
     private void Shoot()
     {
         GameObject SwordSlashObj = Instantiate(SwordSlashPrefab, firingPoint.position, Quaternion.identity);
-        SwordSlash SworadSlashScript = SwordSlashObj.GetComponent<SwordSlash>();
+        Bullet SworadSlashScript = SwordSlashObj.GetComponent<Bullet>();
         SworadSlashScript.SetTarget(transform);
     }
 
@@ -69,9 +69,4 @@ public class Knight : MonoBehaviour
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
-    }
 }

@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 6401032976583114263}
   - component: {fileID: 6918541560652364277}
   - component: {fileID: 5184172173493271763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Golem
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,8 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61e4f7f8eb1db74e99d41acc819b5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  hitPoints: 1000
-  currencyWorth: 1000
+  hitPoints: 5000
+  currencyWorth: 1500
+  es: {fileID: 5184172173493271763}
 --- !u!114 &5184172173493271763
 MonoBehaviour:
   m_ObjectHideFlags: 0

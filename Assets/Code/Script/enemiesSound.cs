@@ -15,8 +15,14 @@ public class enemiesSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (HP.hitPoints <= 0 && !playSound)
+
+    }
+    public void PlaySound()
+    {
+
+        if (!playSound)
         {
+            Debug.Log("play");
             audioSource.Stop();
             audioSource.clip = audioClip;
             audioSource.Play();

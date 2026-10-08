@@ -54,13 +54,12 @@ public class EnemyMovement : MonoBehaviour
     }
     public float calDis()
     {
-        float distance = 0;
-        Vector3 CurrPos = this.transform.position;
-        for (int i = pathIndex + 1; i < lm.path.Length-1; i++)
+        float distance = Vector2.Distance(transform.position, lm.path[pathIndex].position);
+
+        for (int i = pathIndex; i < lm.path.Length - 1; i++)
         {
-            distance += Vector2.Distance(lm.path[i].position, lm.path[i+1].position);
+            distance += Vector2.Distance(lm.path[i].position, lm.path[i + 1].position);
         }
-        distance += Vector2.Distance(CurrPos, lm.path[pathIndex].position);
         return distance;
     }
 }

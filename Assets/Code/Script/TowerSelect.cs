@@ -34,12 +34,12 @@ public class TowerSelect : MonoBehaviour
             placeTower.currentTower = placeTower.squareTower;
             ShowHighlight(squareHighlight);
         }
-        if (Keyboard.current.digit2Key.wasPressedThisFrame)
+        if (Keyboard.current.digit3Key.wasPressedThisFrame)
         {
             placeTower.currentTower = placeTower.circleTower;
             ShowHighlight(circleHighlight);
         }
-        if (Keyboard.current.digit3Key.wasPressedThisFrame)
+        if (Keyboard.current.digit2Key.wasPressedThisFrame)
         {
             placeTower.currentTower = placeTower.capsuleTower;
             ShowHighlight(capsuleHighlight);

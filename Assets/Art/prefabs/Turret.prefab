@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Bits: 256
   bulletPrefab: {fileID: 3200817917313322611, guid: 2cac583d34b0eb844a28dca87da85d26, type: 3}
   firingPoint: {fileID: 7387890740775118402}
-  targetingRange: 5
+  targetingRange: 8
   rotationSpeed: 100
   bps: 1
 --- !u!1 &2701706399509659515
@@ -186,7 +186,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.88, y: 1.18}
+    oldSize: {x: 1.76, y: 2.36}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
