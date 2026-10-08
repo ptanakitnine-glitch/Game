@@ -7,11 +7,11 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyPrefabs;
 
     [Header("Attributes")]
-    public int baseEnemies = 1;
+    public int baseEnemies = 3;
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;
-    public float difficultyScalingFactor = 0.75f;
-    public float enemiesPerSecondCap = 15f;
+    public float difficultyScalingFactor = 1.2f;
+    public float enemiesPerSecondCap = 5f;
 
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();

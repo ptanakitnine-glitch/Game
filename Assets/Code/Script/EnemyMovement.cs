@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float moveSpeed = 2f;
+    private SpriteRenderer spriteRenderer;
 
     private Transform target;
     private int pathIndex = 0;
@@ -14,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         target = LevelManager.main.path[pathIndex];
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -37,7 +39,15 @@ public class EnemyMovement : MonoBehaviour
     private void FixedUpdate() // move
     {
         Vector2 direction = (target.position - transform.position).normalized;
-
         rb.linearVelocity = direction * moveSpeed;
+        Debug.Log(direction);
+        if (direction.x > 0.5)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (direction.x < -0.5)
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 }

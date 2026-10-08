@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        currency = 100;
+        currency = 400;
     }
 
     private void Update()
