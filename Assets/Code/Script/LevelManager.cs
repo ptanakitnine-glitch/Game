@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class LevelManager : MonoBehaviour
     {
         currency = 100;
     }
+
+   
 
     public void IncreaseCurrency(int amount)
     {
@@ -42,5 +45,9 @@ public class LevelManager : MonoBehaviour
     {
         waveHeart -= 1;
         
+    }
+    public void restartScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
