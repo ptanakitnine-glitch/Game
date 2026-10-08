@@ -88,7 +88,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 6de02d272c55d324287393139f1bcd9f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.575, y: 0.95}
@@ -133,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   rb: {fileID: 2599555594509350593}
   moveSpeed: 3
+  prog: 0
+  spriteRenderer: {fileID: 5819875959238711586}
 --- !u!50 &2599555594509350593
 Rigidbody2D:
   serializedVersion: 5

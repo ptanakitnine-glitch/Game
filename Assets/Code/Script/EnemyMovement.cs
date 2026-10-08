@@ -12,13 +12,12 @@ public class EnemyMovement : MonoBehaviour
     private int pathIndex = 0;
     public int prog = 0;
     private LevelManager lm;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         target = LevelManager.main.path[pathIndex];
         lm = FindAnyObjectByType<LevelManager>();
-        spriteRenderer.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -29,6 +28,7 @@ public class EnemyMovement : MonoBehaviour
             if(pathIndex == lm.path.Length) // end of path list
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                lm.decreasewaveHeart();
                 Destroy(gameObject);
                 return;
             } else
@@ -42,6 +42,7 @@ public class EnemyMovement : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.linearVelocity = direction * moveSpeed;
+        Debug.Log(direction);
         if (direction.x > 0.5)
         {
             spriteRenderer.flipX = true;

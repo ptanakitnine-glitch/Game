@@ -2103,9 +2103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f179fba4c4d30644aba4b20c304afb7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceTower
-  squareTower: {fileID: 8673414344953332530, guid: 51426cb744be90049bc267dee321848b, type: 3}
-  capsuleTower: {fileID: 4842741050389482764, guid: 4ba1c3ebd5035d7459c7cf3de3652597, type: 3}
-  circleTower: {fileID: 6013960575726534878, guid: 79cdbfa48327d53429907946990ee731, type: 3}
+  squareTower: {fileID: 6728500542727041774, guid: bbbbbe57fb8e7f8488081ccbb77790bb, type: 3}
+  capsuleTower: {fileID: 957103295434101749, guid: 3bee3c93431f7cf49b930dcf785cbba8, type: 3}
+  circleTower: {fileID: 2366754954119095670, guid: 33adf4963345c4d41989e7d6e50ff040, type: 3}
   levelManager: {fileID: 961792721}
   currentTower: {fileID: 0}
 --- !u!4 &898467468
@@ -2679,11 +2679,11 @@ MonoBehaviour:
   - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
   - {fileID: 2854087807484306623, guid: 07549c94995027242a7db7826f83d0b7, type: 3}
   - {fileID: 6421801108457170839, guid: 9b0e0349eb5cd654eb0331d2464b31c4, type: 3}
-  baseEnemies: 200
-  enemiesPerSecond: 200
+  baseEnemies: 1
+  enemiesPerSecond: 1
   timeBetweenWaves: 5
   difficultyScalingFactor: 1.2
-  enemiesPerSecondCap: 200
+  enemiesPerSecondCap: 5
   currentWave: 1
   levelManager: {fileID: 961792721}
 --- !u!114 &961792721
