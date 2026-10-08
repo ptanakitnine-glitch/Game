@@ -7,17 +7,16 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private float moveSpeed = 2f;
-    private SpriteRenderer spriteRenderer;
 
     private Transform target;
     private int pathIndex = 0;
-    private LevelManager level;
+    public int prog = 0;
+    private LevelManager lm;
 
     private void Start()
     {
         target = LevelManager.main.path[pathIndex];
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        level = FindAnyObjectByType<LevelManager>();
+        lm = FindAnyObjectByType<LevelManager>();
     }
 
     private void Update()
@@ -25,32 +24,32 @@ public class EnemyMovement : MonoBehaviour
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
             pathIndex++;
-
-            if(pathIndex == LevelManager.main.path.Length) // end of path list
+            if(pathIndex == lm.path.Length) // end of path list
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
-                level.decreasewaveHeart();
                 Destroy(gameObject);
                 return;
-            } 
-            else
+            } else
             {
-                target = LevelManager.main.path[pathIndex]; // new target
+                target = lm.path[pathIndex]; // new target
             }
         }
     }
     private void FixedUpdate() // move
     {
         Vector2 direction = (target.position - transform.position).normalized;
+
         rb.linearVelocity = direction * moveSpeed;
-        Debug.Log(direction);
-        if (direction.x > 0.5)
+    }
+    public float calDis()
+    {
+        float distance = 0;
+        Vector3 CurrPos = this.transform.position;
+        for (int i = pathIndex + 1; i < lm.path.Length-1; i++)
         {
-            spriteRenderer.flipX = true;
+            distance += Vector2.Distance(lm.path[i].position, lm.path[i+1].position);
         }
-        else if (direction.x < -0.5)
-        {
-            spriteRenderer.flipX = false;
-        }
+        distance += Vector2.Distance(CurrPos, lm.path[pathIndex].position);
+        return distance;
     }
 }

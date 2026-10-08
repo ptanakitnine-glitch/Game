@@ -47,16 +47,21 @@ public class Cannon : MonoBehaviour
     {
         GameObject MissileObj = Instantiate(MissilePrefab, firingPoint.position, Quaternion.identity);
         Missile MissileScript = MissileObj.GetComponent<Missile>();
+        Findtarget();
         MissileScript.SetTarget(target);
     }
 
     private void Findtarget()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, Vector2.zero, 0f, enemyMark);
-
-        if (hits.Length > 0)
+        float distance = 999;
+        foreach (RaycastHit2D hit in hits)
         {
-            target = hits[0].transform;
+            if (distance > hit.transform.gameObject.GetComponent<EnemyMovement>().calDis())
+            {
+                target = hit.transform;
+                distance = hit.transform.gameObject.GetComponent<EnemyMovement>().calDis();
+            }
         }
     }
 
