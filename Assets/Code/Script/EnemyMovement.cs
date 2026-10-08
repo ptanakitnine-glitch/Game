@@ -27,7 +27,8 @@ public class EnemyMovement : MonoBehaviour
                 EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
                 return;
-            } else
+            } 
+            else
             {
                 target = LevelManager.main.path[pathIndex]; // new target
             }

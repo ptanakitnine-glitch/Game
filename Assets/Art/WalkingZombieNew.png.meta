@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 507661abd357aac4e9b8cc6adaa150ad
+guid: f26c663d9298ac04581e948593aec7d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7419996673594866026
-    second: WalkingZombie_pack_0
+      213: 8171297733765300589
+    second: WalkingZombieNew_0
   - first:
-      213: -2708843015208860087
-    second: WalkingZombie_pack_1
+      213: 7755015202375357500
+    second: WalkingZombieNew_1
   - first:
-      213: 6006317020263124256
-    second: WalkingZombie_pack_2
+      213: -2903214369238650163
+    second: WalkingZombieNew_2
   - first:
-      213: -6835732254818385672
-    second: WalkingZombie_pack_3
+      213: 3213798180697381111
+    second: WalkingZombieNew_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -111,89 +111,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WalkingZombie_pack_0
+      name: WalkingZombieNew_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 65
-        width: 28
-        height: 37
+        x: 20
+        y: 66
+        width: 26
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a69b33c69af19f660800000000000000
-      internalID: 7419996673594866026
+      spriteID: d610907def7466170800000000000000
+      internalID: 8171297733765300589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkingZombie_pack_1
+      name: WalkingZombieNew_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 66
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34565d1d395f9b60800000000000000
+      internalID: 7755015202375357500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingZombieNew_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc278beb9e5b5b7d0800000000000000
+      internalID: -2903214369238650163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingZombieNew_3
       rect:
         serializedVersion: 2
         x: 84
-        y: 65
-        width: 25
-        height: 40
+        y: 2
+        width: 26
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9468d2631a1486ad0800000000000000
-      internalID: -2708843015208860087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WalkingZombie_pack_2
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 1
-        width: 27
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 02d8a21d189ba5350800000000000000
-      internalID: 6006317020263124256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WalkingZombie_pack_3
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 1
-        width: 28
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f0ced34bb99221a0800000000000000
-      internalID: -6835732254818385672
+      spriteID: 7f8934cfa64b99c20800000000000000
+      internalID: 3213798180697381111
       vertices: []
       indices: 
       edges: []
@@ -202,7 +202,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7575514bb91af2c4da959398e07d90e2
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +210,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: True
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      WalkingZombie_pack_0: 7419996673594866026
-      WalkingZombie_pack_1: -2708843015208860087
-      WalkingZombie_pack_2: 6006317020263124256
-      WalkingZombie_pack_3: -6835732254818385672
+      WalkingZombieNew_0: 8171297733765300589
+      WalkingZombieNew_1: 7755015202375357500
+      WalkingZombieNew_2: -2903214369238650163
+      WalkingZombieNew_3: 3213798180697381111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
