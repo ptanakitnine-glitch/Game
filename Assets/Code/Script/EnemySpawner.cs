@@ -78,11 +78,11 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         int index = Random.Range(1, 100);
-        if (index < 3)
+        if (index < 2)
         {
             index = 2;
         }
-        else if (index < 38)
+        else if (index < 39.5)
         {
             index = 1;
         }

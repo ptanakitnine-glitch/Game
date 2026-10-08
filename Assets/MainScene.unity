@@ -2679,11 +2679,11 @@ MonoBehaviour:
   - {fileID: 2778066774582820153, guid: f00bfd924fe7f3440814bbab36a4b1b1, type: 3}
   - {fileID: 2854087807484306623, guid: 07549c94995027242a7db7826f83d0b7, type: 3}
   - {fileID: 6421801108457170839, guid: 9b0e0349eb5cd654eb0331d2464b31c4, type: 3}
-  baseEnemies: 3
-  enemiesPerSecond: 0.5
+  baseEnemies: 200
+  enemiesPerSecond: 200
   timeBetweenWaves: 5
   difficultyScalingFactor: 1.2
-  enemiesPerSecondCap: 5
+  enemiesPerSecondCap: 200
   currentWave: 1
   levelManager: {fileID: 961792721}
 --- !u!114 &961792721
