@@ -5775,6 +5775,7 @@ MonoBehaviour:
   difficultyScalingFactor: 1.2
   enemiesPerSecondCap: 5
   currentWave: 1
+  levelManager: {fileID: 1108147006}
 --- !u!1001 &1108942600
 PrefabInstance:
   m_ObjectHideFlags: 0

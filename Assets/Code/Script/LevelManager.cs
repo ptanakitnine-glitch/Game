@@ -7,9 +7,12 @@ public class LevelManager : MonoBehaviour
     public GameObject Ending;
     public Transform startPoint;
     public Transform[] path;
+    public AudioSource audioSource;
+    public AudioClip bgmEnd;
+    public bool playSound = false;
 
     public int currency;
-    public int waveHeart=5;
+    public int waveHeart = 5;
 
     private void Awake()
     {
@@ -23,9 +26,14 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        if (waveHeart<=0)
+        if (waveHeart<=0 && !playSound)
         {
             Ending.SetActive(true);
+            audioSource.Stop();
+            audioSource.clip = bgmEnd;
+            audioSource.Play();
+            audioSource.loop = false;
+            playSound = true;
         }
     }
 

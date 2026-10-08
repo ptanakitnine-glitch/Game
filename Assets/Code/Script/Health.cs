@@ -3,7 +3,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [Header("Attributes")]
-    [SerializeField] private int hitPoints = 20;
+    [SerializeField] public int hitPoints = 20;
     [SerializeField] private int currencyWorth = 25;
 
     public void TakeDamage(int dmg)

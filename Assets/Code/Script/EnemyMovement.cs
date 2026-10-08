@@ -11,11 +11,13 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target;
     private int pathIndex = 0;
+    private LevelManager level;
 
     private void Start()
     {
         target = LevelManager.main.path[pathIndex];
         spriteRenderer = GetComponent<SpriteRenderer>();
+        level = FindAnyObjectByType<LevelManager>();
     }
 
     private void Update()
@@ -27,6 +29,7 @@ public class EnemyMovement : MonoBehaviour
             if(pathIndex == LevelManager.main.path.Length) // end of path list
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                level.decreasewaveHeart();
                 Destroy(gameObject);
                 return;
             } 

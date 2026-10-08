@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2524243954456473052}
   - component: {fileID: 6401032976583114263}
   - component: {fileID: 6918541560652364277}
+  - component: {fileID: 5184172173493271763}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Untagged
@@ -195,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   rb: {fileID: 7296751561667078543}
-  moveSpeed: 0.5
+  moveSpeed: 5
 --- !u!114 &6918541560652364277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +211,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   hitPoints: 1000
   currencyWorth: 1000
+--- !u!114 &5184172173493271763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421801108457170839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90978cab3ec9f0c479968837597c9a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  audioClip: {fileID: 8300000, guid: 0d582d5fc6278fe4b91f84fdaeaec4ad, type: 3}
+  HP: {fileID: 6918541560652364277}

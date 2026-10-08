@@ -77,7 +77,19 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        int index = Random.Range(0, enemyPrefabs.Length);
+        int index = Random.Range(1, 100);
+        if (index < 3)
+        {
+            index = 2;
+        }
+        else if (index < 38)
+        {
+            index = 1;
+        }
+        else
+        {
+            index = 0;
+        }
         GameObject prefabToSpawn = enemyPrefabs[index];
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
