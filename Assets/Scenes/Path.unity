@@ -3559,6 +3559,7 @@ MonoBehaviour:
   - {fileID: 597522842}
   - {fileID: 1525528709}
   - {fileID: 1629130590}
+  currency: 0
 --- !u!4 &1108147007
 Transform:
   m_ObjectHideFlags: 0

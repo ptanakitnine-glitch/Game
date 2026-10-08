@@ -13,10 +13,11 @@ public class MouseClick : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-        if(Input.GetMouseButtonDown(0))
+    {
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    Instantiate(spawnObject, pos, Quaternion.identity);
+            Instantiate(spawnObject, pos, Quaternion.identity);
         }
-
+    }
 }
