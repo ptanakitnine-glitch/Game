@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8141493658102956375}
   - component: {fileID: 4373055824859435572}
-  - component: {fileID: 8968474727135970015}
+  - component: {fileID: 5158792204176391311}
   m_Layer: 0
   m_Name: Plot
   m_TagString: Untagged
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!61 &8968474727135970015
+--- !u!61 &5158792204176391311
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

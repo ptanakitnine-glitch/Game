@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Path
   - Tower
-  - enemy
   layers:
   - Default
   - TransparentFX
@@ -14,11 +13,11 @@ TagManager:
   - 
   - Water
   - UI
-  - base
-  - gun
-  - enemy
-  - Bullet
-  - Missile
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -43,15 +42,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Base
-    uniqueID: 367007037
-    locked: 0
-  - name: turret_1
-    uniqueID: 2642082221
-    locked: 0
-  - name: Bullet
-    uniqueID: 81230995
     locked: 0
   m_RenderingLayers:
   - Default
