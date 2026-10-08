@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager main;
-
+    public GameObject Ending;
     public Transform startPoint;
     public Transform[] path;
 
@@ -21,7 +21,13 @@ public class LevelManager : MonoBehaviour
         currency = 100;
     }
 
-   
+    private void Update()
+    {
+        if (waveHeart<=0)
+        {
+            Ending.SetActive(true);
+        }
+    }
 
     public void IncreaseCurrency(int amount)
     {
@@ -49,5 +55,6 @@ public class LevelManager : MonoBehaviour
     public void restartScene()
     {
         SceneManager.LoadScene(0);
+        Debug.Log("restart");
     }
 }

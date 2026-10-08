@@ -8,6 +8,6 @@ public class WaveUI : MonoBehaviour
 
     private void Update()
     {
-        waveText.text = "Wave " + enemySpawner.currentWave;
+        waveText.text = " " + enemySpawner.currentWave;
     }
 }
