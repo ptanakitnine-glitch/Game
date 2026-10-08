@@ -8,6 +8,7 @@ public class Missile : MonoBehaviour
     [SerializeField] private float MissileSpeed = 5f;
     [SerializeField] private int MissileDamage = 3;
     [SerializeField] private float explosiveRadius = 2f;
+    [SerializeField] private int explosiveDamage = 2;
 
     private Transform target;
 
@@ -45,7 +46,7 @@ public class Missile : MonoBehaviour
         }
         void Damage(GameObject enemy)
         {
-            Destroy(enemy);
+            enemy.gameObject.GetComponent<Health>().TakeDamage(explosiveDamage);
         }
 
     }

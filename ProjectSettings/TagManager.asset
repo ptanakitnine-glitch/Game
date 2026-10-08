@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Path
-  - Tower
+  - enemy
+  - jh
   layers:
   - Default
   - TransparentFX
@@ -13,11 +13,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - base
+  - gun
+  - enemy
+  - Bullet
+  - Missile
   - 
   - 
   - 
@@ -42,6 +42,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Base
+    uniqueID: 519278257
+    locked: 0
+  - name: turret_1
+    uniqueID: 1595716041
+    locked: 0
+  - name: Bullet
+    uniqueID: 511969077
     locked: 0
   m_RenderingLayers:
   - Default

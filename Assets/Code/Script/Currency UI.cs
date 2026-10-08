@@ -7,6 +7,6 @@ public class CurrencyUI : MonoBehaviour
 
     private void Update()
     {
-        currencyText.text = "$" + LevelManager.main.currency;
+        currencyText.text = "" + LevelManager.main.currency;
     }
 }
